@@ -1,0 +1,5 @@
+Vào terminal, nhập npm install
+
+Xong nhập npm run server
+
+Mở thêm tab mới, nhập npm start
