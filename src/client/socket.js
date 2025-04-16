@@ -1,6 +1,6 @@
 import io from 'socket.io-client'
 import { Observable } from 'rxjs'
 
-const socket = io('http://localhost:8000')
+const socket = io(`${process.env.BACKEND_URL}`)
 
 export default socket

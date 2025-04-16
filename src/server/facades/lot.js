@@ -12,7 +12,7 @@ const placeBid = (bid, lot) => new Promise((resolve, reject) => {
   if (lot.bidHistory.some(({ amount }) => amount >= bid.amount)) {
     return reject(new Error('Giá mới phải cao hơn giá cũ!'))
   }
-  lot.currentPrice = lot.startPrice + bid.amount
+  lot.currentPrice = bid.amount
   lot.bidHistory = [ bid, ...lot.bidHistory ]
   return resolve(bid)
 })
