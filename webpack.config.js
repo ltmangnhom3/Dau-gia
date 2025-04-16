@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+require('dotenv').config();
 
 module.exports = {
   entry: './src/client/index.js',
@@ -29,12 +30,14 @@ module.exports = {
     ]
   },
   plugins: [
-//    new webpack.optimize.UglifyJsPlugin()
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_BACKEND_URL': JSON.stringify(process.env.REACT_APP_BACKEND_URL)
+    })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
     port: 8080,
-    proxy: { '/api': 'http://localhost:8000' }
+    proxy: { '/api': process.env.REACT_APP_BACKEND_URL }
   }
 }
