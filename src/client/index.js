@@ -1,7 +1,9 @@
 import { getLotById } from './facades/lot'
 import main from './main'
 import App from './components/App'
-
+/**
+1
+*/
 const appNode = document.getElementById('app')
 
 /**
