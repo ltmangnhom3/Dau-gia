@@ -11,3 +11,4 @@ const appNode = document.getElementById('app')
  */
 getLotById('62aee188-d0de-471a-8e2e-2918b0bfdd62')
   .then(state => main(state, appNode, App))
+// init
