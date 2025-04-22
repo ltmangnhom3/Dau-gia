@@ -16,5 +16,5 @@ const main = (state, vdom, { view, update = defaultUpdate }) => {
   const newVdom = view({ state, dispatch })
   patch(vdom, newVdom)
 }
-
+ * Load main App state (i.e. lot)
 export default main
